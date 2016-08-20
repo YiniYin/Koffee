@@ -12,8 +12,8 @@ const map: any = {
   'moment': 'vendor/moment/moment.js',
   'ng2-bootstrap': 'vendor/ng2-bootstrap',
   'underscore': 'vendor/underscore/underscore.js',
-  'jquery': 'vendor/jquery',
-  'bootstrap': 'vendor/bootstrap'
+  'jquery': 'vendor/jquery/dist',
+  'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.js'
 };
 
 /** User packages configuration. */
@@ -29,12 +29,19 @@ const packages: any = {
   'underscore':{
     format: 'cjs'
   },
-  'jquery':{
-    format: 'cjs'
+  'jquery': {
+    'main': 'jquery',
+    'format': 'global',
+    'defaultExtension': 'js'
   },
   'bootstrap':{
     format: 'cjs'
   }
+};
+
+const meta: any = {
+  'jquery': { format: 'global', exports: '$' },
+  'bootstrap': {format: 'global', deps:['jquery']}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -84,4 +91,4 @@ System.config({
 });
 
 // Apply the user's configuration.
-System.config({ map, packages });
+System.config({ map, packages, meta });

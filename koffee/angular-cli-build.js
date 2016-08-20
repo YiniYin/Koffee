@@ -19,8 +19,15 @@ module.exports = function(defaults) {
       'underscore/underscore.js',
       'ng2-bootstrap/**/*.js',
       'moment/moment.js',
-      'jquery/dist/jquery.js',
+      'jquery/dist/**/*.+(js|min.map)',
       'bootstrap/dist/js/bootstrap.js'
+    ],
+    polyfills: [
+      'vendor/es6-shim/es6-shim.js',
+      'vendor/reflect-metadata/Reflect.js',
+      'vendor/systemjs/dist/system.src.js',
+      'vendor/zone.js/dist/zone.js',
+      'vendor/jquery/dist/jquery.min.js'
     ]
   });
 };

@@ -1,7 +1,9 @@
-/// <reference path="../../../typings/globals/underscore/index.d.ts" />
-import * as _ from 'underscore';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+/// <reference path="../../../typings/globals/underscore/index.d.ts" />
+import * as _ from 'underscore';
 
 @Component({
   moduleId: 'main',
