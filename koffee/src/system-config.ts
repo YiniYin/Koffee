@@ -30,9 +30,9 @@ const packages: any = {
     format: 'cjs'
   },
   'jquery': {
-    'main': 'jquery',
-    'format': 'global',
-    'defaultExtension': 'js'
+    main: 'jquery',
+    format: 'global',
+    defaultExtension: 'js'
   },
   'bootstrap':{
     format: 'cjs'
@@ -40,9 +40,10 @@ const packages: any = {
 };
 
 const meta: any = {
-  'jquery': { format: 'global', exports: '$' },
   'bootstrap': {format: 'global', deps:['jquery']}
 };
+
+System.import('bootstrap');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
